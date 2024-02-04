@@ -35,7 +35,7 @@ const Login=()=>{
     const [message,setMessage]=useState("");
     const handleClick= async ()=>{
         try{
-            const response=await axios.post("http://localhost:4000/login",{email:email});
+            const response=await axios.post("/login",{email:email});
 
             if(response.status===201){
                 setMessage("Check Your Inbox! Email Sent")
